@@ -3,7 +3,7 @@
 angular.module('xwarsBackendApp')
   .controller('RaceCtrl', function ($scope, $http, socket) {
     $scope.Races = [];
-
+	$scope.newRace = {};
     $http.get('/api/races').success(function(Races) {
       $scope.Races = Races;
       socket.syncUpdates('race', $scope.Races);
