@@ -1,0 +1,62 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="race in awesomeRaces">
+        <li><a href="#" tooltip="{{race.info}}">{{race.name}}<button type="button" class="close" ng-click="deleteRace(race)">&times;</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <form class="race-form">
+    <label>Syncs in realtime across clients</label>
+    <p class="input-group">
+      <input type="text" class="form-control"  ng-model="newRace.name">
+      <input type="text" class="form-control"  ng-model="newRace.info">
+      <input type="text" class="form-control"  ng-model="newRace.effect.attack.projectile">
+      <input type="text" class="form-control"  ng-model="newRace.effect.attack.rocket">
+      <input type="text" class="form-control"  ng-model="newRace.effect.attack.plasma">
+      <input type="text" class="form-control"  ng-model="newRace.effect.attack.ray">
+      <input type="text" class="form-control"  ng-model="newRace.effect.attack.explosive">
+      <input type="text" class="form-control"  ng-model="newRace.effect.attack.biological">
+      <input type="text" class="form-control"  ng-model="newRace.effect.attack.antimatter">
+      <input type="text" class="form-control"  ng-model="newRace.effect.defense.armouring">
+      <input type="text" class="form-control"  ng-model="newRace.effect.defense.shield">
+      <input type="text" class="form-control"  ng-model="newRace.effect.defense.carbon">
+      <input type="text" class="form-control"  ng-model="newRace.effect.defense.teleportation">
+      <input type="text" class="form-control"  ng-model="newRace.effect.general.ship_cost">
+      <input type="text" class="form-control"  ng-model="newRace.effect.general.ship_time_construct">
+      <input type="text" class="form-control"  ng-model="newRace.effect.general.defense_cost">
+      <input type="text" class="form-control"  ng-model="newRace.effect.general.defense_time_construct">
+      <input type="text" class="form-control"  ng-model="newRace.effect.general.production">
+      <input type="text" class="form-control"  ng-model="newRace.effect.general.trade">
+      <input type="text" class="form-control"  ng-model="newRace.effect.general.finance">
+      <input type="text" class="form-control"  ng-model="newRace.effect.general.transport">
+      <input type="text" class="form-control"  ng-model="newRace.effect.espionage.espionage">
+      <input type="text" class="form-control"  ng-model="newRace.effect.espionage.anti_espionage">
+      <input type="text" class="form-control"  ng-model="newRace.effect.espionage.sabotage">
+      <input type="text" class="form-control"  ng-model="newRace.effect.espionage.anti_sabotage">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="addRace()">Add New</button>
+      </span>
+    </p>
+  </form>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.0.13 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer>
