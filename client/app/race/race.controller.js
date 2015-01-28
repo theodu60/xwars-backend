@@ -10,6 +10,7 @@ angular.module('xwarsBackendApp')
     });
 
     $scope.addRace = function() {
+	    console.log("addRace");
       if($scope.newRace === '') {
         return;
       }
