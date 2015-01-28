@@ -2,19 +2,19 @@
 
 angular.module('xwarsBackendApp')
   .controller('RaceCtrl', function ($scope, $http, socket) {
-    $scope.awesomeRaces = [];
+    $scope.Races = [];
 
-    $http.get('/api/races').success(function(awesomeRaces) {
-      $scope.awesomeRaces = awesomeRaces;
-      socket.syncUpdates('race', $scope.awesomeRaces);
+    $http.get('/api/races').success(function(Races) {
+      $scope.Races = Races;
+      socket.syncUpdates('race', $scope.Races);
     });
 
     $scope.addRace = function() {
       if($scope.newRace === '') {
         return;
       }
-      $http.post('/api/races', { name: $scope.newRace });
-      $scope.newRace = '';
+      $http.post('/api/races', $scope.newRace);
+      $scope.newRace = {};
     };
 
     $scope.deleteRace = function(race) {
