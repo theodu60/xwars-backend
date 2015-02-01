@@ -2,9 +2,14 @@
 
 angular.module('xwarsBackendApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    $scope.menu = [{
+    $scope.menu = [
+    {
       'title': 'Home',
       'link': '/'
+    },
+    {
+      'title': 'Races',
+      'link': '/races'
     }];
 
     $scope.isCollapsed = true;

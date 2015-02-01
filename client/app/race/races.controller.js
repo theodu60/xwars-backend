@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('xwarsBackendApp')
-  .controller('RaceCtrl', function ($scope, $http, socket) {
+  .controller('RacesCtrl', function ($scope, $http, socket) {
     $scope.Races = [];
 	  $scope.newRace = {};
 
