@@ -1,0 +1,141 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+  <form>
+  <div class="row">
+    <div class="col-lg-12 fline">
+      <h2 class="page-header">Race Details</h2>
+
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <h4>General</h4>
+          <div class="form-group">
+            <label for="RaceName">Name</label>
+            <input type="text" class="form-control" id="RaceName" placeholder="Enter Name Race" ng-model="Race.name">
+          </div>
+          <div class="form-group">
+            <label for="RaceDescription">Description</label>
+            <input type="text" class="form-control" id="RaceDescription" placeholder="Enter Desciption Race" ng-model="Race.info">
+          </div>
+      </div>
+      <div class="col-md-7 center">
+        <button type="submit" class="btn btn-default" ng-click="addRace()">Submit</button>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="col-md-3">
+        <h4>Attack Effect( Ship )</h4>
+          <div class="form-group">
+            <label for="RaceName">Projectile</label>
+            <input type="number" class="form-control"  placeholder="Projectile Value" ng-model="Race.effect.attack.projectile">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">Rocket</label>
+            <input type="number" class="form-control"  placeholder="Rocket Value" ng-model="Race.effect.attack.rocket">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">Plasma</label>
+            <input type="number" class="form-control"  placeholder="Plasma Value" ng-model="Race.effect.attack.plasma">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">Ray</label>
+            <input type="number" class="form-control"  placeholder="Ray Value" ng-model="Race.effect.attack.ray">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">Explosive</label>
+            <input type="number" class="form-control"  placeholder="Explosive Value" ng-model="Race.effect.attack.explosive">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">Biological</label>
+            <input type="number" class="form-control"  placeholder="Biological Value" ng-model="Race.effect.attack.biological">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">Antimatter</label>
+            <input type="number" class="form-control"  placeholder="Antimatter Value" ng-model="Race.effect.attack.antimatter">
+          </div>
+      </div>
+      <div class="col-md-3">
+        <h4>Defense Effect ( Ship )</h4>
+          <div class="form-group">
+            <label for="RaceName">Armouring</label>
+            <input type="number" class="form-control"  placeholder="Armouring Value" ng-model="Race.effect.defense.armouring">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">Shield</label>
+            <input type="number" class="form-control"  placeholder="Shield Value" ng-model="Race.effect.defense.shield">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">Carbon</label>
+            <input type="number" class="form-control"  placeholder="Carbon Value" ng-model="Race.effect.defense.carbon">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">Teleportation</label>
+            <input type="number" class="form-control"  placeholder="Teleportation Value" ng-model="Race.effect.defense.teleportation">
+          </div>
+      </div>
+      <div class="col-md-3">
+        <h4>General Effect</h4>
+          <div class="form-group">
+            <label for="RaceName">ship_cost</label>
+            <input type="number" class="form-control"  placeholder="ship_cost Value" ng-model="Race.effect.general.ship_cost">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">ship_time_construct</label>
+            <input type="number" class="form-control"  placeholder="ship_time_construct Value" ng-model="Race.effect.general.ship_time_construct">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">defense_cost</label>
+            <input type="number" class="form-control"  placeholder="defense_cost Value" ng-model="Race.effect.general.defense_cost">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">defense_time_construct</label>
+            <input type="number" class="form-control"  placeholder="defense_time_construct Value" ng-model="Race.effect.general.defense_time_construct">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">production</label>
+            <input type="number" class="form-control"  placeholder="production Value" ng-model="Race.effect.general.production">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">trade</label>
+            <input type="number" class="form-control"  placeholder="trade Value" ng-model="Race.effect.general.trade">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">finance</label>
+            <input type="number" class="form-control"  placeholder="finance Value" ng-model="Race.effect.general.finance">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">transport</label>
+            <input type="number" class="form-control"  placeholder="transport Value" ng-model="Race.effect.general.transport">
+          </div>
+      </div>
+      <div class="col-md-3">
+        <h4>Espionage Effect</h4>
+          <div class="form-group">
+            <label for="RaceName">espionage</label>
+            <input type="number" class="form-control"  placeholder="espionage Value" ng-model="Race.effect.espionage.espionage">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">anti_espionage</label>
+            <input type="number" class="form-control"  placeholder="anti_espionage Value" ng-model="Race.effect.espionage.anti_espionage">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">sabotage</label>
+            <input type="number" class="form-control"  placeholder="sabotage Value" ng-model="Race.effect.espionage.sabotage">
+          </div>
+          <div class="form-group">
+            <label for="RaceName">anti_sabotage</label>
+            <input type="number" class="form-control"  placeholder="anti_sabotage Value" ng-model="Race.effect.espionage.anti_sabotage">
+          </div>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.0.13 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer>
