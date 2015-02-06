@@ -7,7 +7,6 @@ var RaceSchema = new Schema({
   name: String,
   info: String,
   effects: {
-	  
 	  attack: {
 		  projectile: Number,
 		  rocket: Number,
