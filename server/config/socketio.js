@@ -18,6 +18,9 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/planete_type/planete_type.socket').register(socket);
+  require('../api/planete/planete.socket').register(socket);
+  require('../api/building/building.socket').register(socket);
   require('../api/race/race.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 }
