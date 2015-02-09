@@ -13,6 +13,7 @@ exports.index = function(req, res) {
 
 // Get a single race
 exports.show = function(req, res) {
+  console.log(req);
   Race.findById(req.params.id, function (err, race) {
     if(err) { return handleError(res, err); }
     if(!race) { return res.send(404); }
